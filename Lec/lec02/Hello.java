@@ -1,4 +1,4 @@
-package Lec.lec02;
+package Lec.lec02; // wtf is this? 
 
 /**
 * This is the first simple program in Core Java Chapter 3.
