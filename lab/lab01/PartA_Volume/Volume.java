@@ -1,7 +1,7 @@
 /** 
  * This program computes the volume (in liters) of a six-pack of soda 
  * cans and the total volume of a six-pack and a two-liter bottle. 
- * @author Cay Horstmann / Justin Meckmann 
+ * @author Justin Meckmann 
  */ 
 
 public class Volume 
