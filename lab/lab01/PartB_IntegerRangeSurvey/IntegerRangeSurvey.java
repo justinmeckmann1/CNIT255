@@ -26,6 +26,7 @@ public class IntegerRangeSurvey {
 
         input.close(); // close scanner to avoid error
 
+        // iterate over possibile choices and print corresponding values
         if (choice == 1) {
             System.out.println("In a byte-typed variable, you can assign values from "
             + Byte.MIN_VALUE + " to " + Byte.MAX_VALUE + ".");

@@ -12,6 +12,8 @@ public class OverflowUnderflowTest {
 
         // TODO: print the examples overflow and underflow for byte, short, int, long, float, and double.
         // To do so, you must first correctly declare data types and variables.
+        // 1) the MAX / MIN value of the datatype is assigned using MAX_VALUE / MIN_VALUE. Then, this value is decreased or increased
+        // in order to provpke the under or overflow
 
         // byte
         // overflow 
@@ -69,11 +71,13 @@ public class OverflowUnderflowTest {
         
 
         // float 
+        // overflow
         float f = Float.MAX_VALUE; 
         System.out.println("float before underflow; " + f);
         f *= f; 
         System.out.println("float after underflow; " + f);
         
+        // underflow
         f = Float.MIN_VALUE; 
         System.out.println("float before underflow; " + f);
         f /= f; 
@@ -81,11 +85,13 @@ public class OverflowUnderflowTest {
 
 
         // double 
+        // overflow
         double d = Double.MAX_VALUE; 
         System.out.println("double before underflow; " + d);
         d *= d; 
         System.out.println("double after underflow; " + d);
         
+        // underflow
         d = Double.MIN_VALUE; 
         System.out.println("double before underflow; " + d);
         d /= d; 
