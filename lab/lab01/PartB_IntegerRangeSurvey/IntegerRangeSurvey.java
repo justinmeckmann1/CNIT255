@@ -6,6 +6,7 @@ import java.util.Scanner;
 * Purpose: Accept user input (1-4) and print the range of the selected integer type.
 * Notes: For this exercise, assume the user always enters 1-4 (no validation required).
 */
+
 public class IntegerRangeSurvey {
     public static void main(String[] args) 
     {

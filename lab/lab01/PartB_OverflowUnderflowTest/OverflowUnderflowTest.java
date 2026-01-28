@@ -1,8 +1,9 @@
 /**
 * OverflowUnderflowTest.java
-* @author <Your Name>
+* @author Justin Meckmann
 * Purpose: Shows what happens when you exceed the limits of all integer types.
 */
+
 public class OverflowUnderflowTest {
     public static void main(String[] args) {
         // Always include these two lines in all your assignments that require screenshots
