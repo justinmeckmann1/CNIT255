@@ -7,8 +7,8 @@
 public class template {
     public static void main(String[] args) {
         // Always include these two lines in all your assignments that require screenshots
-        System.out.println(System.getProperty("user.name"));
-        System.out.println(java.time.LocalDateTime.now().toString()+ "\n");
+        System.out.println("Username:  " + System.getProperty("user.name"));
+        System.out.println("Timestamp: " + java.time.LocalDateTime.now().toString()+ "\n");
 
 
 
