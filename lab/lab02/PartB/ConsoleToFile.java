@@ -19,7 +19,7 @@ public class ConsoleToFile {
         System.out.print("Enter a line of text: "); 
         String line = in.nextLine(); 
         if (line == null || line.length() == 0) { 
-            System.out.println("No text entered – aborting."); 
+            System.out.println("No text entered - aborting."); 
             in.close();
             return; 
         } 
@@ -30,7 +30,6 @@ public class ConsoleToFile {
         System.out.println("Saved uppercase version to output.txt"); 
 
         in.close();
-
 
     }
 }
