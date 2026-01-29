@@ -1,7 +1,7 @@
 /**
-* <FILENAME>.java.                          <-- #TODO
-* @author Justin Meckmann                   <-- #TODO
-* Purpose: <Explain what happens here!>     <-- #TODO
+* PromotionPuzzle_v1.java.          
+* @author Justin Meckmann                
+* Purpose: Proving overflow for a mixed-type expression (int -> long)
 */
 
 public class PromotionPuzzle_v1 {

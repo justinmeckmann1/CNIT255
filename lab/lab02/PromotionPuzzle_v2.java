@@ -1,7 +1,7 @@
 /**
-* PromotionPuzzle_v2.java
-* @author Justin Meckmann               
-* Purpose: <Explain what happens here!>     <-- #TODO
+* PromotionPuzzle_v2.java.          
+* @author Justin Meckmann                
+* Purpose: Proving overflow for a mixed-type expression (float -> double)
 */
 
 public class PromotionPuzzle_v2 {
@@ -10,13 +10,13 @@ public class PromotionPuzzle_v2 {
         System.out.println(System.getProperty("user.name"));
         System.out.println(java.time.LocalDateTime.now().toString()+ "\n");
 
-        int big = 1_000_000; 
-        int resultWrong = big * big; // overflow in int BEFORE assignment 
-        long stillWrong = big * big; 
-        long resultRight = 1L * big * big; // forces long math FIRST 
+        Float big = (float) 1.0E20; 
+        Float resultWrong = big * big; // overflow in BEFORE assignment 
+        double stillWrong = big * big; 
+        double resultRight = 1d * big * big; // adding 1d forces double math 
 
-        System.out.println("wrong (int): " + resultWrong); 
-        System.out.println("still wrong (long): " + stillWrong); 
-        System.out.println("correct(long): " + resultRight); 
+        System.out.println("wrong (float): " + resultWrong); 
+        System.out.println("still wrong (double): " + stillWrong); 
+        System.out.println("correct(double): " + resultRight);  
     } 
 } 
