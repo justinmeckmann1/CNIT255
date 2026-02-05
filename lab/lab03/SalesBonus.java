@@ -8,6 +8,9 @@ public class SalesBonus {
 
     public static final double TARGET = 10000;
     public static void main(String[] args) { 
+        System.out.println("Username: " + System.getProperty("user.name"));
+        System.out.println("Time: " + java.time.LocalDateTime.now().toString());
+
         int yourSales = Integer.parseInt(args[0]); // parses the passed args as an int
         final int TARGET = 10_000;   // constant goal 
 

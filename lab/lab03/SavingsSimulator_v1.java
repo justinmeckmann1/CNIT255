@@ -7,6 +7,8 @@
 
 public class SavingsSimulator_v1 {
     public static void main(String[] args) { 
+        System.out.println("Username: " + System.getProperty("user.name"));
+        System.out.println("Time: " + java.time.LocalDateTime.now().toString());
         
         int years = 0;              // initializing years, starting with 0
         double payment = 500;       // this could also be an int. Used double to adress a case, where the payment might not be a whole number 

@@ -7,6 +7,9 @@
 
 public class FizzBuzzSwitch { 
     public static void main(String[] args) { 
+        System.out.println("Username: " + System.getProperty("user.name"));
+        System.out.println("Time: " + java.time.LocalDateTime.now().toString());
+
         for (int n = 1; n <= 30; n++) { // iterate from 1 to 30
             switch (n % 15) {
                 case 0:
