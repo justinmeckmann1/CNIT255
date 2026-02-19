@@ -10,14 +10,10 @@
 public class BankAccount {
     // main method 
     public static void main(String[] args) {
-        // Identification and Timestamp
-        String username = System.getProperty("user.name");
-        String time = java.time.LocalDateTime.now().toString();
-        System.out.println(username);
-        System.out.println(time);
-
-
-        System.out.println(); // new line
+        // print username and timestamp
+        System.out.println(System.getProperty("user.name"));
+        System.out.println(java.time.LocalDateTime.now().toString()); 
+        System.out.println(); // line wrap
 
 
         BankAccount myAccount = new BankAccount("Ada", 1250.00);
