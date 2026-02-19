@@ -20,12 +20,15 @@ public class MoneyFormatDemo {
         System.out.println(java.time.LocalDateTime.now().toString()); 
         System.out.println(); // line wrap
         
+        // initialize variables
         double price, discount, saved, priceDiscounted;
         Scanner scanner = new Scanner(System.in); 
 
+        // get price from user
         System.out.print("Price in USD: ");
         price = scanner.nextDouble(); 
 
+        // get discount from user
         System.out.print("Discount percent (e.g., 15 for 15%): ");
         discount = scanner.nextDouble();
         discount = discount / 100; // convert to decimal 
@@ -39,14 +42,13 @@ public class MoneyFormatDemo {
         currencyFormat.setMinimumFractionDigits(2); 
         percentFormat.setMinimumFractionDigits(0);
 
+        // return formatted and calculated values
         System.out.println("\nPrice: " + currencyFormat.format(price)); 
         System.out.println("Discount: " + percentFormat.format(discount)); 
         System.out.println("You save: " + currencyFormat.format(saved)); 
         System.out.println("Final price: " + currencyFormat.format(priceDiscounted)); 
 
+        // close scanner
         scanner.close();
-
     }
-
-
 }
