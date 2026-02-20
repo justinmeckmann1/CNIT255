@@ -1,3 +1,13 @@
+/**
+ * CardDeck.java
+ * @author Justin Meckmann
+ * Purpose: Models a standard 52-card deck.
+ *          Supports deck creation, shuffling, drawing cards from the top,
+ *          peeking at the top card, and tracking how many cards remain
+ *          in the deck.
+ */
+
+
 package edu.cit255.cardgame;
 
 import java.util.Arrays;

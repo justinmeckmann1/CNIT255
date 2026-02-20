@@ -1,3 +1,12 @@
+/**
+ * Card.java
+ * @author Justin Meckmann
+ * Purpose: A single playing card class defined by a value and a suit.
+ *          Provides a string representation of the card (e.g., "Ace of Spades")
+ *          by mapping numeric values and suits to human-readable names.
+ */
+
+
 package edu.cit255.cardgame;
 
 public class Card {

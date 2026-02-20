@@ -1,3 +1,11 @@
+/**
+ * DeckTest.java
+ * @author Justin Meckmann
+ * Purpose: Test program for the Card and CardDeck classes.
+ *          Creates a deck, shuffles it, draws several cards,
+ *          and prints the state of the deck before and after drawing.
+ */
+
 package edu.cit255.cardgame;
 
 public class DeckTest {

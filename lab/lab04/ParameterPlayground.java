@@ -1,8 +1,13 @@
 /**
-* Student.java 
-* @author Justin Meckmann                 
-* Purpose: 
-**/
+ * ParameterPlayground.java
+ * @author Justin Meckmann
+ * Purpose: Demonstrates how Java passes parameters to methods.
+ *          Shows the difference between passing primitive types and
+ *          object references, including:
+ *          - Primitives passed by value (unchanged outside the method)
+ *          - Object references passed by value (object state can change)
+ *          - Why swapping object references inside a method does not work
+ */
 
 public class ParameterPlayground {
     static void tripleNumber(int x) {
