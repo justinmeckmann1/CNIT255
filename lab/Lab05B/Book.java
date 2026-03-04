@@ -1,3 +1,13 @@
+/**
+* Book.java 
+* @author Justin Meckmann                 
+* Purpose:  Class that stores information to a book, using the fields: 
+            - title, author & year with corresponding getter functions
+
+            Overwrites toString, equals and hashCode
+**/
+
+
 import java.util.Objects;
 
 public class Book {
@@ -11,6 +21,19 @@ public class Book {
         this.year = year;  
     }
 
+    // getter methods --> needed to compare the properties of two objects in equals 
+    public String getTitle() {
+        return this.title; 
+    }
+
+    public String getAuthor() {
+        return this.author; 
+    }
+
+    public int getYear() {
+        return this.year; 
+    }
+
     @Override
     public String toString() {
         return String.format("%s (%d) by %s",this.title, this.year, this.author);
@@ -18,9 +41,15 @@ public class Book {
 
     @Override
     public boolean equals(Object o) {
-        // cannot access private fields from other class, as the toString uses all three fields, 
+        // check if object is same reference as current object
+        if (o == this) {
+            return true; 
+        }
+
+        Book book = (Book) o; // cast to type Book -> required to use getter functions
+
         // this method is used to compare two classes.
-        if (o.toString().equals(this.toString())) {
+        if (this.title.equals((book.getTitle())) && this.author.equals(book.getAuthor()) && this.year == book.getYear()) {
             return true; 
         }
         else {
