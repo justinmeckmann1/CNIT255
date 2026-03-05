@@ -10,7 +10,7 @@
 import java.util.Scanner;
 
 public class CoffeeTest {
-    public static void main() {
+    public static void main(String[] args) {
         // print username and timestamp
         System.out.println(System.getProperty("user.name"));
         System.out.println(java.time.LocalDateTime.now().toString()); 
@@ -25,7 +25,7 @@ public class CoffeeTest {
         System.out.printf("Enter a abbreviation: ");
         abbr = scanner.nextLine();
 
-        CoffeeSize myCoffee = CoffeeSize.ofAbbreviation(abbr);
+        CoffeeSize myCoffee = CoffeeSize.ofAbbreviation(abbr.toUpperCase());
 
         if (myCoffee == null) {
             System.out.println("Abbreviation not found");
