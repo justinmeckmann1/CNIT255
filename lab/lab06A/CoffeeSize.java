@@ -1,3 +1,19 @@
+/**
+* CoffeeSize.java
+* @author Justin Meckmann
+* Purpose:  Enum representing different coffee sizes.
+*           Constant field values:
+*           - abbreviation -> String
+*           - volume       -> int (in milliliters)
+*
+*           Methods:
+*           - getAbbreviation() -> returns the abbreviation
+*           - getVolume()       -> returns the volume in mL
+*           - ofAbbreviation()  -> returns the CoffeeSize that
+*                                  matches a given abbreviation
+**/
+
+
 public enum CoffeeSize{
     // Constants
     SMALL("S", 240),
