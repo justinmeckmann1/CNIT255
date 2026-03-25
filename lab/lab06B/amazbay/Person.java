@@ -1,3 +1,9 @@
+/**
+ * Person.java
+ * @author Justin Meckmann
+ * Purpose: Represents a user in the AmazBay messaging system.
+ */
+
 package amazbay;
 
 public class Person
@@ -8,8 +14,10 @@ public class Person
     private String lastName; 
     private int uid;
 
-    public Person(int uid) {
+    public Person(int uid, String firstName, String lastName) {
         setUID(uid);
+        setFirstName(firstName);
+        setLastName(lastName);
     }
 
     // UID setter and getter

@@ -1,3 +1,10 @@
+/**
+ * Driver.java
+ * @author Justin Meckmann (edits), CNIT 255 Lecture Material
+ * Purpose: Runs the AmazBay messaging simulation.
+ */
+
+
 package amazbay;
 
 import java.util.Scanner;
@@ -9,13 +16,13 @@ public class Driver
         // Add one person to the Website.  You will likely have to change this
         // if you update the Person constructor.
         // Person TA = new Person(1001, "255", "TA");
-        Person TA = new Person(1001);
+        Person TA = new Person(1001, "255", "TA");
         w.addPerson(TA);
 
         // Add several other people to the website.
-        w.addPerson(new Person(1002));
-        w.addPerson(new Person(1003));
-        w.addPerson(new Person(1004));
+        w.addPerson(new Person(1002, "Jane", "Smith"));
+        w.addPerson(new Person(1003, "James", "Miller"));
+        w.addPerson(new Person(1004, "John", "Doe"));
     }
 
     public static void handlePrintMessages(Website w, int firstUID, int secondUID)
@@ -35,7 +42,7 @@ public class Driver
             System.out.println("Person with uid "+secondUID+" not found, can't print message history");
         }
 
-        System.out.println("Showing chat history between ["+a.getFirstName()+"] and ["+b.getFirstName()+"]");
+        System.out.println("Showing chat history between ["+a.getFullName()+"] and ["+b.getFullName()+"]");
         boolean any = false;
 
         Message[] messages = w.getMessagesFor(firstUID);
@@ -77,6 +84,12 @@ public class Driver
 
     public static void main(String args[])
     {
+        // print username and timestamp
+        System.out.println(System.getProperty("user.name"));
+        System.out.println(java.time.LocalDateTime.now().toString()); 
+        System.out.println(); // line wrap
+
+
         Scanner s = new Scanner(System.in);
 
         Website w = new Website();

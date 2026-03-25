@@ -1,3 +1,9 @@
+/**
+ * Website.java
+ * @author Justin Meckmann
+ * Purpose: Manages users and messages for the AmazBay system
+ */
+
 package amazbay;
 
 import java.util.Arrays;
