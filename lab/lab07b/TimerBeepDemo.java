@@ -30,6 +30,11 @@ public class TimerBeepDemo {
 
     // main method
     public static void main(String[] args) {
+        // print username and timestamp
+        System.out.println(System.getProperty("user.name"));
+        System.out.println(java.time.LocalDateTime.now().toString()); 
+        System.out.println(); // line wrap
+
         ActionListener listener = new TimePrinter(); 
         Timer t = new Timer(3000, listener);   // 3 000 ms 
         t.start(); 
