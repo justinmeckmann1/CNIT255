@@ -1,3 +1,10 @@
+/**
+ * CalculatorController.java
+ * @author Justin Meckmann
+ * Purpose: Controller class for the calculator. Handles user input,
+ * communicates between the view and model, and updates results.
+ */
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,30 +22,34 @@ public class CalculatorController implements ActionListener {
         // attach listeners to all buttons
         JPanel buttonGrid = view.getButtonGrid();
 
+        // Add listeners to buttons
         for (Component c : buttonGrid.getComponents()) {
             JButton b = (JButton) c;
             b.addActionListener(this);
         }
     }
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
-        String key = ((JButton) e.getSource()).getText();
+        String key = ((JButton) e.getSource()).getText();       // Get key
 
-        if ("0123456789.".contains(key)) {            // ----- digits & decimal point
-            view.updateDisplay(model.enterDigit(key));
-        } else if ("±".equals(key)) {                 // ----- sign change
-            view.updateDisplay(model.toggleSign());
-        } else if ("√".equals(key)) {                 // ----- square root
-            view.updateDisplay(model.applyUnary(Math::sqrt));
-        } else if ("C".equals(key)) {                 // ----- clear current entry
-            view.updateDisplay(model.clearEntry());
-        } else if ("AC".equals(key)) {                // ----- clear everything
-            view.updateDisplay(model.clearAll());
-
-        } else {                                      // ----- +  −  x  ÷  =
-            view.updateDisplay(model.applyBinary(key));
+        if ("0123456789.".contains(key)) { 
+            view.updateDisplay(model.enterDigit(key));          // digits & decimal point
+        } 
+        else if ("±".equals(key)) { 
+            view.updateDisplay(model.toggleSign());             // sign change
+        }
+        else if ("√".equals(key)) { 
+            view.updateDisplay(model.applyUnary(Math::sqrt));   // square root
+        }
+        else if ("C".equals(key)) { 
+            view.updateDisplay(model.clearEntry());             // clear current entry
+        }
+        else if ("AC".equals(key)) {
+            view.updateDisplay(model.clearAll());               // clear everything
+        }
+        else { 
+            view.updateDisplay(model.applyBinary(key));         // +  −  x  ÷  =
         }
     }
 }

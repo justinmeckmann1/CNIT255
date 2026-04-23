@@ -1,3 +1,9 @@
+/**
+ * CalculatorModel.java
+ * @author Justin Meckmann
+ * Purpose: Model class for the calculator. Performs arithmetic
+ * operations such as addition, subtraction, multiplication, and division.
+ */
 
 public class CalculatorModel {
     // Responsible for calculator logic and state.
@@ -22,6 +28,7 @@ public class CalculatorModel {
         return displayText; 
     }
 
+    // handle digit input
     public String enterDigit(String d) {
         if (startNewEntry) {
             displayText = ".".equals(d) ? "0." : d;
@@ -31,9 +38,9 @@ public class CalculatorModel {
             displayText = displayText + d;
         }
         return displayText; 
-        
     }
 
+    // handle sign toggle
     public String toggleSign() {
         if (displayText.equals("0")){
             return displayText;
@@ -48,6 +55,7 @@ public class CalculatorModel {
         return displayText; 
     }
 
+    // handle unary operations
     public String applyUnary(java.util.function.DoubleUnaryOperator op) {
         try {
             double v = Double.parseDouble(displayText); // get value from displayText ad double
@@ -62,6 +70,7 @@ public class CalculatorModel {
         }
     }
 
+    // handle binary operations
     public String applyBinary(String op) {
         try {
             double current = Double.parseDouble(displayText);
@@ -89,6 +98,7 @@ public class CalculatorModel {
         }
     }
 
+    // format double to a string
     private String formatResult(double val) {
         // trim trailing zeros for integers, limit to 12 characters
         String s = String.format("%.10f", val).replaceAll("\\.?0+$", "");
@@ -96,6 +106,7 @@ public class CalculatorModel {
         return s;
     }
 
+    // display an error
     private String showError() {
         displayText   = "Error"; 
         accumulator   = 0;
@@ -105,15 +116,15 @@ public class CalculatorModel {
         return displayText; 
     }
 
+    // Clear current entry
     public String clearEntry() {
-        // Clear current entry
         displayText = "0"; 
         startNewEntry= true; 
         return displayText; 
     }
 
+    // clear current entry and memory
     public String clearAll() {
-        // clear current entry and memory
         accumulator = 0; 
         pendingOp = "=";
         startNewEntry = true; 

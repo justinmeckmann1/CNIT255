@@ -1,3 +1,10 @@
+/**
+ * CalculatorView.java
+ * @author Justin Meckmann
+ * Purpose: View class for the calculator. Builds the graphical user
+ * interface and handles user interaction input and output.
+ */
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -29,20 +36,23 @@ public class CalculatorView extends JFrame {
                 "0",  ".",  "=",  "+"
         };
 
+        // Create and add buttons
         for (String k : keys) {
             JButton b = new JButton(k);
             b.setFont(b.getFont().deriveFont(Font.PLAIN, 20f));
-            // b.addActionListener(listener);
             buttonGrid.add(b);
         }
 
+        // Create menu bar
         JMenuBar mb = new JMenuBar();
         JMenu mFile = new JMenu("File");
         JMenu mHelp = new JMenu("Help");
 
+        // Create menu items
         miQuit  = new JMenuItem("Quit");
         miAbout = new JMenuItem("About");
 
+        // Add menu actions
         miQuit.addActionListener(e -> System.exit(0));
         miAbout.addActionListener(
                 e -> JOptionPane.showMessageDialog(
@@ -51,12 +61,14 @@ public class CalculatorView extends JFrame {
                         "About",
                         JOptionPane.INFORMATION_MESSAGE));
 
+        // Build and set menu bar
         mFile.add(miQuit);
         mHelp.add(miAbout);
         mb.add(mFile);
         mb.add(mHelp);
         setJMenuBar(mb);
 
+        // Build main layout
         JPanel root = new JPanel(new BorderLayout(8, 8));
         root.setBorder(BorderFactory.createEmptyBorder(8, 8, 8, 8));
         root.add(display, BorderLayout.NORTH);
