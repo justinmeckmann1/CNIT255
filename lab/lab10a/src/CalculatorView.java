@@ -78,21 +78,13 @@ public class CalculatorView extends JFrame {
         setLocationRelativeTo(null);  // center on screen
     }
 
+    // Update displayed text
     public void updateDisplay(String text) {
-        // Update displayed text
         display.setText(text);
     }
 
-    // getters for controller
+    // getter for controller
     public JPanel getButtonGrid() {
         return buttonGrid;
-    }
-
-    public JMenuItem getQuitMenuItem() {
-        return miQuit;
-    }
-
-    public JMenuItem getAboutMenuItem() {
-        return miAbout;
     }
 }
