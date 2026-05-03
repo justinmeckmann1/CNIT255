@@ -8,9 +8,9 @@ public class ExceptionDemo {
 
     public static void main(String[] args) {
 
-        // Checked exception -> try block 
+        // Part A: Checked exception -> try block 
         try {
-            FileReader file = new FileReader("nonexistent.txt"); // file likely doesn't exist
+            FileReader file = new FileReader("file.txt"); // nonexistent file
         } catch (FileNotFoundException e) {
             System.out.println("Checked exception caught");
         }
