@@ -9,20 +9,20 @@ public class StringDemo {
         String str = "Java";
 
         // StringBuilder
-        StringBuilder sb = new StringBuilder();
-        sb.append("Programming");
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Programming");
 
         // StringBuffer
-        StringBuffer sbf = new StringBuffer();
-        sbf.append("Language");
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("Language");
 
         // print individual results
         System.out.println("String: " + str);
-        System.out.println("StringBuilder: " + sb.toString());
-        System.out.println("StringBuffer: " + sbf.toString());
+        System.out.println("StringBuilder: " + stringBuilder.toString());
+        System.out.println("StringBuffer: "  + stringBuffer.toString());
 
         // combine into final sentence
-        String finalSentence = str + " " + sb + " " + sbf;
+        String finalSentence = str + " " + stringBuilder.toString() + " " + stringBuffer.toString();
         System.out.println("Final sentence: " + finalSentence);
     }
 }
